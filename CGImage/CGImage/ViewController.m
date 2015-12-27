@@ -25,6 +25,12 @@
 {
     UIImage *image = [UIImage imageNamed:@"DH4G9IJF}@UH5G38R@TP{9P"];
     CGImageRef temImg = image.CGImage;//拿到位图信息
+    
+    NSLog(@"%lu", CGImageGetTypeID());
+    NSLog(@"%zu", CGImageGetWidth(temImg));
+    NSLog(@"%zu", CGImageGetHeight(temImg));
+    
+
     //截取位图
     temImg = CGImageCreateWithImageInRect(temImg, CGRectMake(0, 0, 100, 100));
     //得到新图片
